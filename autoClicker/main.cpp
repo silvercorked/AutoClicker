@@ -19,7 +19,7 @@ constexpr const bool UntilKillCode = true;
 constexpr const u32 MaxClicks = 500;
 constexpr const f32 ClicksPerSecond = 20.0f;
 
-const std::string KillCodes = " A0";
+const std::string KillCodes = "";
 
 constexpr const u32 StartMouseXPos = 1200;
 constexpr const u32 StartMouseYPos = 500;
@@ -36,10 +36,11 @@ auto attemptClick(
 auto [[nodiscard]] checkIfKeyPressed(i32) -> bool;
 auto [[nodiscard]] checkIfAnyKeyPressed(std::vector<i32> const&) -> bool;
 
-int main() {
+auto main() -> int {
 	const std::vector<i32> killcodes = parseKillCodes(KillCodes);
 	if (UntilKillCode && killcodes.size() == 0) {
 		std::cout << "Cannot run forever without kill code! set KillCode Variable or set UntilKillCode to false\n";
+		return 0;
 	}
 	SetCursorPos(StartMouseXPos, StartMouseYPos);
 	auto reminderTime = std::chrono::steady_clock::now();
