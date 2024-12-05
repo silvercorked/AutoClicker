@@ -64,6 +64,7 @@ auto main() -> int {
 				"REMINDER: {}\n\tkillCodes: {}\n",
 				(UntilKillCode ? "Awaiting Kill Code" : "Awaiting Clicks or Kill Code"), KillCodes
 			);
+			reminderTime = currTime;
 		}
 	}
 	return 0;
