@@ -19,7 +19,7 @@ constexpr const bool UntilKillCode = true;
 constexpr const u32 MaxClicks = 500;
 constexpr const f32 ClicksPerSecond = 20.0f;
 
-const std::string KillCodes = "";
+const std::string KillCodes = " 0`azxc123456789";
 
 constexpr const u32 StartMouseXPos = 1200;
 constexpr const u32 StartMouseYPos = 500;
